@@ -1,0 +1,70 @@
+form, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+div.my-form form {
+    margin: 0 auto;
+    width: 450px;
+    background-color: #3d3939;
+    position: relative;
+    top: 40px;
+    border: 1px solid #262626;
+}
+
+div.my-form form h2{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 5px 0 5px 5px;
+    border: 1px solid #161712;
+}
+
+div.my-form .nameandlast {
+    padding: 10px 10px;
+    width: 180px;
+    background-color: #262626;
+    border: 1px double #171717;
+}
+
+div.my-form .product {
+    padding: 10px 10px;
+    width: 180px;
+    background-color: #262626;
+    border: 1px double #171717;
+}
+
+div.my-form .attention {
+    padding: 7px 7px;
+    width: 300px;
+    height: 120px;
+    background-color: #262626;
+    border: 1px double #171717;
+    overflow: hidden;
+}
+
+div.my-form button {
+    position: relative;
+    left: 332px;
+    width: 100px;
+}
+
+div.my-form label {
+    width: 100%;
+    display: block;
+    background: #1b1616;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #171717;
+    padding: 10px 0;
+}
+
+div.my-form label span {
+    display: block;
+    color: #d0dbdf;
+    font-size: 13px;
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 12px 20px 0 0;
+}

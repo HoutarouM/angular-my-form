@@ -1,12 +1,37 @@
-<div>
-    <h2>Zamuwienie</h2>
+<div class="my-form">
+    <form>
+        <h2>Zamówienie:</h2>
 
-    imie i nazwisko <input type="text"> <br>
-    Email <input type="text"> <br>
-    produkt <select></select> <br>
-    ilosc <input type="number"> <br>
-    uwagi <textarea></textarea> <br>
+        <label>
+            <span>Imie i nazwisko</span>
+            <input type="text" class="input-text" id="naneandlast" name="nameandlast"> 
+        </label> 
 
-    <button>Wyslij</button>
+        <label>
+            <span>Email</span>
+            <input type="text" class="input-text" id="email" name="email">
+        </label>
 
+        <label>
+            <span>Produkt</span>
+            <select id="product" class="product" name="product">
+                <option value="pralka">pralka</option>
+                <option value="dlugopis">dlugopis</option>
+                <option value="olowek">olowek</option>
+                <option value="lodówka">lodówka</option>
+            </select>
+        </label>
+
+        <label>
+            <span>Ilosc</span>
+            <input type="number" id="count" name="count" class="count">
+        </label>
+          
+        <label>
+            <span>Uwagi</span>
+            <textarea cols="15" rows="5" class="attention" name="attention" id="attention"></textarea>
+        </label>
+
+        <button>Wyslij</button>
+    </form>
 </div>
