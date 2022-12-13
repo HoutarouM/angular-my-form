@@ -1,37 +1,39 @@
 <div class="my-form">
-    <form>
-        <h2>Zamówienie:</h2>
+    <form #f="ngForm">
+        <div class="f">
+            <h2>Zamówienie:</h2>
 
-        <label>
-            <span>Imie i nazwisko</span>
-            <input type="text" class="input-text" id="naneandlast" name="nameandlast"> 
-        </label> 
+            <label>
+                <span>Imie i nazwisko</span>
+                <input type="text" class="input-text" id="naneandlast" ngModel name="nameandlast">
+            </label>
 
-        <label>
-            <span>Email</span>
-            <input type="text" class="input-text" id="email" name="email">
-        </label>
+            <label>
+                <span>Email</span>
+                <input type="text" class="input-text" id="email" ngModel="Prosze podac email" name="email">
+            </label>
 
-        <label>
-            <span>Produkt</span>
-            <select id="product" class="product" name="product">
-                <option value="pralka">pralka</option>
-                <option value="dlugopis">dlugopis</option>
-                <option value="olowek">olowek</option>
-                <option value="lodówka">lodówka</option>
-            </select>
-        </label>
+            <label>
+                <span>Produkt</span>
+                <select id="product" class="product" ngModel name="product">
+                    <option value="pralka">pralka</option>
+                    <option value="dlugopis">dlugopis</option>
+                    <option value="olowek">olowek</option>
+                    <option value="lodówka">lodówka</option>
+                </select>
+            </label>
 
-        <label>
-            <span>Ilosc</span>
-            <input type="number" id="count" name="count" class="count">
-        </label>
-          
-        <label>
-            <span>Uwagi</span>
-            <textarea cols="15" rows="5" class="attention" name="attention" id="attention"></textarea>
-        </label>
+            <label>
+                <span>Ilosc</span>
+                <input type="number" id="count" class="count" ngModel name="count">
+            </label>
 
-        <button>Wyslij</button>
+            <label>
+                <span>Uwagi</span>
+                <textarea cols="15" rows="5" class="attention" id="attention" ngModel name="attention"></textarea>
+            </label>
+
+            <button type="submit" (click)="onSubmit()">Wyslij</button>
+        </div>
     </form>
 </div>
