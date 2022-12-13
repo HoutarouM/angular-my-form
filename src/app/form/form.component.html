@@ -1,21 +1,21 @@
 <div class="my-form">
-    <form #f="ngForm">
+    <form #myForm="ngForm">
         <div class="f">
             <h2>Zamówienie:</h2>
 
             <label>
                 <span>Imie i nazwisko</span>
-                <input type="text" class="input-text" id="naneandlast" ngModel name="nameandlast">
+                <input type="text" class="input-text" id="nameandlast" [(ngModel)]="nameandlast" name="nameandlast">
             </label>
 
             <label>
                 <span>Email</span>
-                <input type="text" class="input-text" id="email" ngModel="Prosze podac email" name="email">
+                <input type="text" class="input-text" id="email" [(ngModel)]="email" name="email">
             </label>
 
             <label>
                 <span>Produkt</span>
-                <select id="product" class="product" ngModel name="product">
+                <select id="product" class="product" [(ngModel)]="product" name="product">
                     <option value="pralka">pralka</option>
                     <option value="dlugopis">dlugopis</option>
                     <option value="olowek">olowek</option>
@@ -25,15 +25,15 @@
 
             <label>
                 <span>Ilosc</span>
-                <input type="number" id="count" class="count" ngModel name="count">
+                <input type="number" id="count" class="count" [(ngModel)]="count" name="count">
             </label>
 
             <label>
                 <span>Uwagi</span>
-                <textarea cols="15" rows="5" class="attention" id="attention" ngModel name="attention"></textarea>
+                <textarea cols="15" rows="5" class="attention" id="attention" [(ngModel)]="attention" name="attention"></textarea>
             </label>
 
-            <button type="submit" (click)="onSubmit()">Wyslij</button>
+            <button type="submit" (click)="onSubmit()">Wyślij</button>
         </div>
     </form>
 </div>
