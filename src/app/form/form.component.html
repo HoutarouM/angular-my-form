@@ -5,17 +5,26 @@
 
             <label>
                 <span>Imie i nazwisko</span>
-                <input type="text" class="input-text" id="nameandlast" [(ngModel)]="nameandlast" name="nameandlast">
+                <input type="text" class="input-text" id="nameandlast" required #nameForm="ngModel" [(ngModel)]="nameandlast" name="nameandlast" >
             </label>
+            <div class="alert" *ngIf="nameForm.invalid && nameForm.touched">
+                <p>imie i nazwisko jest wymagane</p>
+            </div>
 
             <label>
                 <span>Email</span>
-                <input type="text" class="input-text" id="email" [(ngModel)]="email" name="email">
+                <input type="text" class="input-text" id="email" [(ngModel)]="email" name="email" required pattern=".+@.+" #emailForm="ngModel">
             </label>
+            <div class="alert" *ngIf="emailForm.invalid && emailForm.touched">
+                <p>wpisz mail</p>
+            </div>
+            <div class="alert" *ngIf="emailForm.touched && emailForm.errors?.['pattern']">
+                <p>to ne jest email</p>
+            </div>
 
             <label>
                 <span>Produkt</span>
-                <select id="product" class="product" [(ngModel)]="product" name="product">
+                <select id="product" class="product" [(ngModel)]="product" name="product" required>
                     <option value="pralka">pralka</option>
                     <option value="dlugopis">dlugopis</option>
                     <option value="olowek">olowek</option>
@@ -25,15 +34,17 @@
 
             <label>
                 <span>Ilosc</span>
-                <input type="number" id="count" class="count" [(ngModel)]="count" name="count">
+                <input type="number" id="count" class="count" min="1" max="1000" [(ngModel)]="count" name="count" required>
             </label>
 
             <label>
                 <span>Uwagi</span>
-                <textarea cols="15" rows="5" class="attention" id="attention" [(ngModel)]="attention" name="attention"></textarea>
+                <textarea cols="15" rows="5" class="attention" id="attention" [(ngModel)]="attention"
+                    name="attention" required></textarea>
             </label>
 
-            <button type="submit" (click)="onSubmit()">Wyślij</button>
+            <button type="submit" (click)="onSubmit()" [disabled]="!myForm.form.valid">Wyślij</button>
+            <button type="button" style="background-color: azure;" (click)="myForm.resetForm()">Wyczysc</button>
         </div>
     </form>
 </div>

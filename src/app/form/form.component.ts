@@ -10,10 +10,10 @@ export class FormComponent implements OnInit {
   constructor() { }
 
   nameandlast: string = "";
-  email: string = "";
+  email: string = "Proszę wpisać email";
   product: string = "";
-  count: number = 0;
-  attention: string = "";
+  count: number = 1;
+  attention: string = "Jezeli masz uwagi wpisz je";
 
   ngOnInit(): void {
   }
